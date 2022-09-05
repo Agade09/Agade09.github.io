@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+<table>
+<tbody>
+<tr>
+	<td>
+		<select id="N_sites" name="N_sites">
+		  <option value="3">3</option>
+		  <option value="7">7</option>
+		</select>
+		<label for="N_sites"># Sites:</label><br>
+
+		<select id="gender" name="gender">
+		  <option value="gender_male">Male</option>
+		  <option value="gender_female">Female</option>
+		</select>
+		<label for="gender">Gender:</label><br>
+
+		<input type="text" id="age" name="age" style="width: 50px">
+		<label for="age">Age</label><br>
+		<input type="text" id="weight" name="weight" style="width: 50px">
+		<label for="weight">Weight</label><br>
+
+		<input type="checkbox" id="lange_calipers" name="lange_calipers" value="lange_calipers">
+		<label for="lange_calipers">Lange Calipers</label><br>
+
+		<script src="calculations.js"></script>
+		<input type="button" value="Calculate" onclick="calc(this.form)"><input type="reset" value="Reset" name="Reset"><br>
+	</td>
+
+	<td>
+		<input type="text" id="skinfold_abdomen" name="skinfold_abdomen" style="width: 50px">
+		<label for="skinfold_abdomen">Abdomen</label><br>
+		<input type="text" id="skinfold_quadriceps" name="skinfold_quadriceps" style="width: 50px">
+		<label for="skinfold_quadriceps">Quadriceps</label><br>
+		<input type="text" id="skinfold_pectoral" name="skinfold_pectoral" style="width: 50px">
+		<label for="skinfold_pectoral">Pectoral</label><br>
+		<input type="text" id="skinfold_triceps" name="skinfold_triceps" style="width: 50px">
+		<label for="skinfold_triceps">Triceps</label><br>
+		<input type="text" id="skinfold_midaxilla" name="skinfold_midaxilla" style="width: 50px">
+		<label for="skinfold_midaxilla">Midaxilla</label><br>
+		<input type="text" id="skinfold_subscapula" name="skinfold_subscapula" style="width: 50px">
+		<label for="skinfold_subscapula">Subscapula</label><br>
+		<input type="text" id="skinfold_suprailiac" name="skinfold_suprailiac" style="width: 50px">
+		<label for="skinfold_suprailiac">Suprailiac</label><br>
+	</td>
+
+	<td>
+		<input type="text" id="percent_fat" name="percent_fat" style="width: 50px" readonly>
+		<label for="percent_fat">% Fat:</label><br>
+		<input type="text" id="lean_weight" name="lean_weight" style="width: 50px" readonly>
+		<label for="lean_weight">Lean Weight</label><br>
+	</td>
+</tr>
+</tbody>
+</table>
+</form>
+
+</body>
+</html>
