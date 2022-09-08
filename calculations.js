@@ -36,7 +36,7 @@ function JacksonPollockHarpendenCorrection7SiteFemale(percent_fat){
 
 function calc(form){
 	var N_sites = form.N_sites.options[form.N_sites.selectedIndex].value
-	var gender = form.gender.options[form.gender.selectedIndex].value
+	var gender = form.gender.value
 	var lange_calipers = form.lange_calipers.checked
 	if(gender=="gender_male"){
 		if(N_sites=="3"){
