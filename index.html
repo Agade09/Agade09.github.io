@@ -12,43 +12,43 @@
 <tbody>
 <tr>
 	<td>
-		<select id="N_sites" name="N_sites" class='h1'>
+		<script src="calculations.js"></script>
+
+		<select id="N_sites" name="N_sites" class='h1' oninput="calc(this.form)">
 		  <option value="3">3 Sites</option>
 		  <option value="7">7 Sites</option>
 		</select><br>
 
-		<select id="gender" name="gender" class='h1'>
+		<select id="gender" name="gender" class='h1' oninput="calc(this.form)">
 		  <option value="gender_male">Male</option>
 		  <option value="gender_female">Female</option>
 		</select><br>
 
-		<input type="text" id="age" name="age" class="text-field">
+		<input type="text" id="age" name="age" class="text-field" oninput="calc(this.form)">
 		<label for="age" class='h1'>Age</label><br>
-		<input type="text" id="weight" name="weight" class="text-field">
+		<input type="text" id="weight" name="weight" class="text-field"  oninput="calc(this.form)">
 		<label for="weight" class='h1'>Weight</label><br>
 
-		<input type="checkbox" id="lange_calipers" name="lange_calipers" value="lange_calipers">
+		<input type="checkbox" id="lange_calipers" name="lange_calipers" value="lange_calipers" oninput="calc(this.form)">
 		<label for="lange_calipers" class='h1'>Lange Calipers</label><br>
 
-		<script src="calculations.js"></script>
-		<input type="button" value="Calculate" onclick="calc(this.form)" class='h1'>
 		<input type="reset" value="Reset" name="Reset" class='h1'><br>
 	</td>
 
 	<td>
-		<input type="text" id="skinfold_abdomen" name="skinfold_abdomen" class="text-field">
+		<input type="text" id="skinfold_abdomen" name="skinfold_abdomen" class="text-field"  oninput="calc(this.form)">
 		<label for="skinfold_abdomen" class='h1'>Abdomen</label><br>
-		<input type="text" id="skinfold_quadriceps" name="skinfold_quadriceps" class="text-field">
+		<input type="text" id="skinfold_quadriceps" name="skinfold_quadriceps" class="text-field"  oninput="calc(this.form)">
 		<label for="skinfold_quadriceps" class='h1'>Quadriceps</label><br>
-		<input type="text" id="skinfold_pectoral" name="skinfold_pectoral" class="text-field">
+		<input type="text" id="skinfold_pectoral" name="skinfold_pectoral" class="text-field"  oninput="calc(this.form)">
 		<label for="skinfold_pectoral" class='h1'>Pectoral</label><br>
-		<input type="text" id="skinfold_triceps" name="skinfold_triceps" class="text-field">
+		<input type="text" id="skinfold_triceps" name="skinfold_triceps" class="text-field"  oninput="calc(this.form)">
 		<label for="skinfold_triceps" class='h1'>Triceps</label><br>
-		<input type="text" id="skinfold_midaxilla" name="skinfold_midaxilla" class="text-field">
+		<input type="text" id="skinfold_midaxilla" name="skinfold_midaxilla" class="text-field"  oninput="calc(this.form)">
 		<label for="skinfold_midaxilla" class='h1'>Midaxilla</label><br>
-		<input type="text" id="skinfold_subscapula" name="skinfold_subscapula" class="text-field">
+		<input type="text" id="skinfold_subscapula" name="skinfold_subscapula" class="text-field"  oninput="calc(this.form)">
 		<label for="skinfold_subscapula" class='h1'>Subscapula</label><br>
-		<input type="text" id="skinfold_suprailiac" name="skinfold_suprailiac" class="text-field">
+		<input type="text" id="skinfold_suprailiac" name="skinfold_suprailiac" class="text-field"  oninput="calc(this.form)">
 		<label for="skinfold_suprailiac" class='h1'>Suprailiac</label><br>
 	</td>
 
