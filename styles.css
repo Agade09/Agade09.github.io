@@ -3,3 +3,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.constant-text-field {
+  background-color: lightgrey;
+  width: 50px;
+}
+
+.text-field{
+  width: 50px;
+}
