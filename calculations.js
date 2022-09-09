@@ -35,7 +35,7 @@ function JacksonPollockHarpendenCorrection7SiteFemale(percent_fat){
 }
 
 function calc(form){
-	var N_sites = form.N_sites.options[form.N_sites.selectedIndex].value
+	var N_sites = form.N_sites.value
 	var gender = form.gender.value
 	var lange_calipers = form.lange_calipers.checked
 	if(gender=="gender_male"){
@@ -76,4 +76,38 @@ function calc(form){
 	}
 	form.percent_fat.value = percent_fat.toFixed(2)
 	form.lean_weight.value = lean_weight.toFixed(2)
+}
+
+function update_visible(form){
+	var N_sites = form.N_sites.value
+	var gender = form.gender.value
+	if(N_sites=="3"){
+		if(gender=="gender_male"){
+			document.getElementById('skinfold_abdomen_group').style.display = 'inline';
+			document.getElementById('skinfold_quadriceps_group').style.display = 'inline';
+			document.getElementById('skinfold_pectoral_group').style.display = 'inline';
+			document.getElementById('skinfold_triceps_group').style.display = 'none';
+			document.getElementById('skinfold_midaxilla_group').style.display = 'none';
+			document.getElementById('skinfold_subscapula_group').style.display = 'none';
+			document.getElementById('skinfold_suprailiac_group').style.display = 'none';
+		}
+		else{
+			document.getElementById('skinfold_triceps_group').style.display = 'inline';
+			document.getElementById('skinfold_quadriceps_group').style.display = 'inline';
+			document.getElementById('skinfold_suprailiac_group').style.display = 'inline';
+			document.getElementById('skinfold_subscapula_group').style.display = 'none';
+			document.getElementById('skinfold_midaxilla_group').style.display = 'none';
+			document.getElementById('skinfold_pectoral_group').style.display = 'none';
+			document.getElementById('skinfold_abdomen_group').style.display = 'none';
+		}
+	}
+	else{
+		document.getElementById('skinfold_triceps_group').style.display = 'inline';
+		document.getElementById('skinfold_quadriceps_group').style.display = 'inline';
+		document.getElementById('skinfold_suprailiac_group').style.display = 'inline';
+		document.getElementById('skinfold_subscapula_group').style.display = 'inline';
+		document.getElementById('skinfold_midaxilla_group').style.display = 'inline';
+		document.getElementById('skinfold_pectoral_group').style.display = 'inline';
+		document.getElementById('skinfold_abdomen_group').style.display = 'inline';
+	}
 }

@@ -12,14 +12,12 @@
 <tbody>
 <tr>
 	<td>
-		<script src="calculations.js"></script>
-
-		<select id="N_sites" name="N_sites" class='h1' oninput="calc(this.form)">
+		<select id="N_sites" name="N_sites" class='h1' oninput="calc(this.form);update_visible(this.form)">
 		  <option value="3">3 Sites</option>
 		  <option value="7">7 Sites</option>
 		</select><br>
 
-		<select id="gender" name="gender" class='h1' oninput="calc(this.form)">
+		<select id="gender" name="gender" class='h1' oninput="calc(this.form);update_visible(this.form)">
 		  <option value="gender_male">Male</option>
 		  <option value="gender_female">Female</option>
 		</select><br>
@@ -32,24 +30,44 @@
 		<input type="checkbox" id="lange_calipers" name="lange_calipers" value="lange_calipers" oninput="calc(this.form)">
 		<label for="lange_calipers" class='h1'>Lange Calipers</label><br>
 
-		<input type="reset" value="Reset" name="Reset" class='h1'><br>
+		<input type="reset" value="Reset" name="Reset" class='h1' onclick="update_visible(this.form)"><br>
 	</td>
 
 	<td>
-		<input type="text" id="skinfold_abdomen" name="skinfold_abdomen" class="text-field"  oninput="calc(this.form)">
-		<label for="skinfold_abdomen" class='h1'>Abdomen</label><br>
-		<input type="text" id="skinfold_quadriceps" name="skinfold_quadriceps" class="text-field"  oninput="calc(this.form)">
-		<label for="skinfold_quadriceps" class='h1'>Quadriceps</label><br>
-		<input type="text" id="skinfold_pectoral" name="skinfold_pectoral" class="text-field"  oninput="calc(this.form)">
-		<label for="skinfold_pectoral" class='h1'>Pectoral</label><br>
-		<input type="text" id="skinfold_triceps" name="skinfold_triceps" class="text-field"  oninput="calc(this.form)">
-		<label for="skinfold_triceps" class='h1'>Triceps</label><br>
-		<input type="text" id="skinfold_midaxilla" name="skinfold_midaxilla" class="text-field"  oninput="calc(this.form)">
-		<label for="skinfold_midaxilla" class='h1'>Midaxilla</label><br>
-		<input type="text" id="skinfold_subscapula" name="skinfold_subscapula" class="text-field"  oninput="calc(this.form)">
-		<label for="skinfold_subscapula" class='h1'>Subscapula</label><br>
-		<input type="text" id="skinfold_suprailiac" name="skinfold_suprailiac" class="text-field"  oninput="calc(this.form)">
-		<label for="skinfold_suprailiac" class='h1'>Suprailiac</label><br>
+		<div id='skinfold_abdomen_group' style='display:inline'>
+			<input type="text" id="skinfold_abdomen" name="skinfold_abdomen" class="text-field"  oninput="calc(this.form)">
+			<label for="skinfold_abdomen" class='h1'>Abdomen</label><br>
+		</div>
+
+		<div id='skinfold_quadriceps_group' style='display:inline'>
+			<input type="text" id="skinfold_quadriceps" name="skinfold_quadriceps" class="text-field"  oninput="calc(this.form)">
+			<label for="skinfold_quadriceps" class='h1'>Quadriceps</label><br>
+		</div>
+
+		<div id='skinfold_pectoral_group' style='display:inline'>
+			<input type="text" id="skinfold_pectoral" name="skinfold_pectoral" class="text-field"  oninput="calc(this.form)">
+			<label for="skinfold_pectoral" class='h1'>Pectoral</label><br>
+		</div>
+
+		<div id='skinfold_triceps_group' style='display:none'>
+			<input type="text" id="skinfold_triceps" name="skinfold_triceps" class="text-field"  oninput="calc(this.form)">
+			<label for="skinfold_triceps" class='h1'>Triceps</label><br>
+		</div>
+
+		<div id='skinfold_midaxilla_group' style='display:none'>
+			<input type="text" id="skinfold_midaxilla" name="skinfold_midaxilla" class="text-field"  oninput="calc(this.form)">
+			<label for="skinfold_midaxilla" class='h1'>Midaxilla</label><br>
+		</div>
+
+		<div id='skinfold_subscapula_group' style='display:none'>
+			<input type="text" id="skinfold_subscapula" name="skinfold_subscapula" class="text-field"  oninput="calc(this.form)">
+			<label for="skinfold_subscapula" class='h1'>Subscapula</label><br>
+		</div>
+
+		<div id='skinfold_suprailiac_group' style='display:none'>
+			<input type="text" id="skinfold_suprailiac" name="skinfold_suprailiac" class="text-field"  oninput="calc(this.form)">
+			<label for="skinfold_suprailiac" class='h1'>Suprailiac</label><br>
+		</div>
 	</td>
 
 	<td>
@@ -72,5 +90,6 @@
 	<i>Gruber JJ, Pollock ML, Graves JE, Colvin AB, Braith RW. Comparison of Harpenden and Lange calipers in predicting body composition. Res Q Exerc Sport. 1990 Jun;61(2):184-90.</i> <br>
 </div>
 
+<script src="calculations.js"></script>
 </body>
 </html>
