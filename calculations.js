@@ -111,3 +111,35 @@ function update_visible(form){
 		document.getElementById('skinfold_abdomen_group').style.display = 'inline';
 	}
 }
+
+function saveAs(uri, filename) { //https://stackoverflow.com/questions/31656689/how-to-save-img-to-users-local-computer-using-html2canvas
+
+    var link = document.createElement('a');
+
+    if (typeof link.download === 'string') {
+
+        link.href = uri;
+        link.download = filename;
+
+        //Firefox requires the link to be in the body
+        document.body.appendChild(link);
+
+        //simulate click
+        link.click();
+
+        //remove the link when done
+        document.body.removeChild(link);
+
+    } else {
+
+        window.open(uri);
+
+    }
+}
+
+function screenshot(form){
+	const d = new Date();
+	html2canvas(document.getElementById('tr1')).then(canvas => {
+	    saveAs(canvas.toDataURL(), 'skinfold_'+d.getDate()+'_'+d.getMonth()+'_'+d.getFullYear()+'.png');
+	});
+}

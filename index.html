@@ -10,7 +10,7 @@
 <form class="parent-block">
 <table>
 <tbody>
-<tr>
+<tr id='tr1'>
 	<td>
 		<select id="N_sites" name="N_sites" class='h1' oninput="calc(this.form);update_visible(this.form)">
 		  <option value="3">3 Sites</option>
@@ -30,7 +30,8 @@
 		<input type="checkbox" id="lange_calipers" name="lange_calipers" value="lange_calipers" oninput="calc(this.form)">
 		<label for="lange_calipers" class='h1'>Lange Calipers</label><br>
 
-		<input type="reset" value="Reset" name="Reset" class='h1' onclick="update_visible(this.form)"><br>
+		<input type="button" value="Screenshot" name="Screenshot" class='button' onclick="screenshot(this.form)">
+		<input type="reset" value="Reset" name="Reset" class='button' onclick="update_visible(this.form)"><br>
 	</td>
 
 	<td>
@@ -90,6 +91,7 @@
 	<i>Gruber JJ, Pollock ML, Graves JE, Colvin AB, Braith RW. Comparison of Harpenden and Lange calipers in predicting body composition. Res Q Exerc Sport. 1990 Jun;61(2):184-90.</i> <br>
 </div>
 
+<script src="html2canvas.min.js"></script>
 <script src="calculations.js"></script>
 </body>
 </html>
