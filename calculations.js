@@ -109,6 +109,14 @@ function update_visible(form){
 		document.getElementById('skinfold_midaxilla_group').style.display = 'inline';
 		document.getElementById('skinfold_pectoral_group').style.display = 'inline';
 		document.getElementById('skinfold_abdomen_group').style.display = 'inline';
+		if(gender=="gender_male"){
+			document.getElementById('chest_image1').style.display = 'inline';
+			document.getElementById('chest_image2').style.display = 'none';
+		}
+		else{
+			document.getElementById('chest_image1').style.display = 'none';
+			document.getElementById('chest_image2').style.display = 'inline';
+		}
 	}
 }
 
