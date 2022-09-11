@@ -8,23 +8,30 @@
   background-color: lightgrey;
   width: 50px;
   height: 20px;
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
 }
 
 .text-field{
   width: 50px;
   height: 20px;
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
 }
 
 .button{
-  font-size: 1.75vh;
+  font-size: 25px;
+  font-family: Helvetica, sans-serif;
 }
 
 .h1{
-  font-size: 1.75vh;
+  font-size: 25px;
+  font-family: Helvetica, sans-serif;
 }
 
 .bibliography-text{
-  font-size: 1.25vh;
+  font-size: 17px;
+  font-family: Helvetica, sans-serif;
 }
 
 /*https://www.scriptol.com/css/tooltip.php*/
