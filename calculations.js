@@ -148,6 +148,6 @@ function saveAs(uri, filename) { //https://stackoverflow.com/questions/31656689/
 function screenshot(form){
 	const d = new Date();
 	html2canvas(document.getElementById('tr1')).then(canvas => {
-	    saveAs(canvas.toDataURL(), 'skinfold_'+d.getDate()+'_'+d.getMonth()+'_'+d.getFullYear()+'.png');
+	    saveAs(canvas.toDataURL(), 'skinfold_'+d.getFullYear()+'_'+d.getMonth()+'_'+d.getDate()+'.png');
 	});
 }
