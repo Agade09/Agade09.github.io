@@ -20,9 +20,17 @@
 }
 
 .button{
-  width: 50px;
-  height: 20px;
+  height: 35px;
   font-size: 25px;
+  padding: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+.dropdown {
+  box-sizing: content-box;
+  padding: 0px 0px;
+  font-size: 25px;
+  line-height: 1 !important;
   font-family: Helvetica, sans-serif;
 }
 
@@ -33,6 +41,7 @@
 
 .bibliography-text{
   font-size: 17px;
+  line-height: 1;
   font-family: Helvetica, sans-serif;
 }
 
@@ -40,6 +49,7 @@
 .tooltip {
   text-decoration:none;
   position:relative;
+  line-height: 1;
 }
  
 .tooltip span {
