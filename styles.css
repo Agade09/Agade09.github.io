@@ -9,40 +9,39 @@
   width: 50px;
   height: 20px;
   font-size: 20px;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .text-field{
   width: 50px;
   height: 20px;
   font-size: 20px;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .button{
   height: 35px;
   font-size: 25px;
   padding: 0px;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .dropdown {
   box-sizing: content-box;
   padding: 0px 0px;
   font-size: 25px;
-  line-height: 1 !important;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .h1{
   font-size: 25px;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .bibliography-text{
   font-size: 17px;
   line-height: 1;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 /*https://www.scriptol.com/css/tooltip.php*/
