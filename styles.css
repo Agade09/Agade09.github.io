@@ -80,3 +80,60 @@
   overflow:hidden;
   padding:8px;
 }
+
+.landing {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.landing-title {
+  font-size: 32px;
+}
+
+.landing-list {
+  font-size: 22px;
+  line-height: 1.8;
+  list-style: none;
+  padding: 0;
+}
+
+.landing-list a {
+  text-decoration: none;
+}
+
+.landing-list a:hover {
+  text-decoration: underline;
+}
+
+.breathing {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.breathing-title {
+  font-size: 32px;
+}
+
+.breathing-controls {
+  margin-bottom: 40px;
+}
+
+.breathing-display {
+  margin-top: 40px;
+}
+
+#phase_label {
+  font-size: 48px;
+  font-weight: bold;
+  min-height: 60px;
+}
+
+#countdown {
+  font-size: 36px;
+  min-height: 50px;
+}

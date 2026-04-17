@@ -1,6 +1,9 @@
 *
 !.gitignore
 !index.html
+!bodyfat.html
+!breathing.html
+!breathing.js
 !calculations.js
 !styles.css
 !html2canvas.min.js

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Breathing</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<div class="breathing">
+  <p><a href="index.html">&larr; Back</a></p>
+
+  <h1 class="breathing-title">Breathing</h1>
+
+  <div class="breathing-controls">
+    <label class='h1' for="mode">Mode</label>
+    <select id="mode" class='dropdown'>
+      <option value="box">Box Breathing</option>
+      <option value="resonance">Resonance Breathing</option>
+    </select>
+    <br><br>
+
+    <div id="box_controls">
+      <input type="number" id="box_seconds" class="text-field" value="10" min="1" step="1">
+      <label for="box_seconds" class='h1'>Seconds per side</label>
+      <br><br>
+    </div>
+
+    <div id="resonance_controls" style="display:none">
+      <select id="resonance_gender" class='dropdown'>
+        <option value="male" selected>Male</option>
+        <option value="female">Female</option>
+      </select>
+      <label for="resonance_gender" class='h1'>Gender</label>
+      <br><br>
+      <input type="number" id="resonance_height" class="text-field" value="178" min="100" max="230" step="1">
+      <label for="resonance_height" class='h1'>Height (cm)</label>
+      <br>
+      <p id="resonance_info" class='h1' style="font-size:18px"></p>
+    </div>
+
+    <button id="start_btn" class="button">Start</button>
+  </div>
+
+  <div class="breathing-display">
+    <div id="phase_label">Press Start</div>
+    <div id="countdown"></div>
+  </div>
+</div>
+
+<script src="breathing.js"></script>
+</body>
+</html>
