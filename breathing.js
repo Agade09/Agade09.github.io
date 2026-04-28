@@ -9,11 +9,27 @@
   const startBtn = document.getElementById('start_btn');
   const phaseLabel = document.getElementById('phase_label');
   const countdown = document.getElementById('countdown');
+  const totalTimeEl = document.getElementById('total_time');
 
   let audioCtx = null;
   let running = false;
   let phaseTimer = null;
   let countdownTimer = null;
+  let totalTimer = null;
+  let startTimeMs = 0;
+
+  function formatElapsed(ms) {
+    const total = Math.floor(ms / 1000);
+    const h = Math.floor(total / 3600);
+    const m = Math.floor((total % 3600) / 60);
+    const s = total % 60;
+    const pad = (n) => String(n).padStart(2, '0');
+    return h > 0 ? `${h}:${pad(m)}:${pad(s)}` : `${m}:${pad(s)}`;
+  }
+
+  function updateTotalTime() {
+    totalTimeEl.textContent = `Total: ${formatElapsed(Date.now() - startTimeMs)}`;
+  }
 
   // Hasuo et al. 2024 — estimated resonance frequency (breaths per minute)
   // Men:   RF = 17.90 - 0.07 * height(cm)
@@ -96,6 +112,10 @@
     const phases = getPhases();
     running = true;
     startBtn.textContent = 'Stop';
+    startTimeMs = Date.now();
+    updateTotalTime();
+    clearInterval(totalTimer);
+    totalTimer = setInterval(updateTotalTime, 1000);
     let i = 0;
 
     function runPhase() {
@@ -122,6 +142,7 @@
     startBtn.textContent = 'Start';
     clearTimeout(phaseTimer);
     clearInterval(countdownTimer);
+    clearInterval(totalTimer);
     phaseLabel.textContent = 'Press Start';
     countdown.textContent = '';
   }
